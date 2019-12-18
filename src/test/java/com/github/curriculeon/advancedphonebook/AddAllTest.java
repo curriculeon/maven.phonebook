@@ -5,7 +5,9 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class AddAllTest {
 
@@ -13,7 +15,7 @@ public class AddAllTest {
     @Test
     public void test1() {
         // given
-        AdvancedPhoneBook advancedPhoneBook = new AdvancedPhoneBook();
+
         String name = "Joe";
         String[] phoneNumbers = {
                 "302-555-4444",
@@ -21,6 +23,9 @@ public class AddAllTest {
                 "302-555-2222",
                 "302-555-1111",
         };
+        Map<String, List<String>> temp = new LinkedHashMap<>();
+        temp.put(name, Arrays.asList(phoneNumbers));
+        AdvancedPhoneBook advancedPhoneBook = new AdvancedPhoneBook(temp);
 
         // when
         advancedPhoneBook.addAll(name, phoneNumbers);
@@ -42,6 +47,10 @@ public class AddAllTest {
                 "302-555-2222",
         };
 
+        Map<String, List<String>> temp = new LinkedHashMap<>();
+        temp.put(name, Arrays.asList(phoneNumbers));
+        advancedPhoneBook = new AdvancedPhoneBook(temp);
+
         // when
         advancedPhoneBook.addAll(name, phoneNumbers);
         List<String> actualPhoneNumbers = advancedPhoneBook.lookup(name);
@@ -60,6 +69,10 @@ public class AddAllTest {
                 "302-555-4545",
                 "302-555-5656",
         };
+
+        Map<String, List<String>> temp = new LinkedHashMap<>();
+        temp.put(name, Arrays.asList(phoneNumbers));
+        advancedPhoneBook = new AdvancedPhoneBook(temp);
 
         // when
         advancedPhoneBook.addAll(name, phoneNumbers);
