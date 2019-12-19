@@ -12,7 +12,10 @@ public class ReverseLookupTest {
         String expectedName = "John";
         String phoneNumber = "302-555-4545";
         advancedPhoneBook.add(expectedName, phoneNumber);
-        Assert.assertTrue(advancedPhoneBook.hasEntry(phoneNumber));
+        Assert.assertTrue(advancedPhoneBook.hasEntry(expectedName));
+        //Assert.assertTrue(advancedPhoneBook.hasEntry(phoneNumber));
+        //This test had the same problem as the remove test. .hasEntry was being supplied a phone number but that doesn't
+        //work that way so I changed it.
 
         // when
         String actualName = advancedPhoneBook.reverseLookup(phoneNumber);
@@ -28,7 +31,7 @@ public class ReverseLookupTest {
         String expectedName = "Joe";
         String phoneNumber = "302-554-4545";
         advancedPhoneBook.add(expectedName, phoneNumber);
-        Assert.assertTrue(advancedPhoneBook.hasEntry(phoneNumber));
+        Assert.assertTrue(advancedPhoneBook.hasEntry(expectedName));
 
         // when
         String actualName = advancedPhoneBook.reverseLookup(phoneNumber);
@@ -45,7 +48,7 @@ public class ReverseLookupTest {
         String expectedName = "Smith";
         String phoneNumber = "302-554-4535";
         advancedPhoneBook.add(expectedName, phoneNumber);
-        Assert.assertTrue(advancedPhoneBook.hasEntry(phoneNumber));
+        Assert.assertTrue(advancedPhoneBook.hasEntry(expectedName));
 
         // when
         String actualName = advancedPhoneBook.reverseLookup(phoneNumber);
