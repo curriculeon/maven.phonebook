@@ -1,5 +1,6 @@
 package com.github.curriculeon.simplephonebook;
 
+import com.github.curriculeon.AdvancedPhoneBook;
 import com.github.curriculeon.SimplePhoneBook;
 import org.junit.Assert;
 import org.junit.Test;
@@ -10,7 +11,7 @@ import java.util.List;
 public class GetAllContactNames {
     private void test(String[] names) {
         // given
-        SimplePhoneBook advancedPhoneBook = new SimplePhoneBook();
+        AdvancedPhoneBook advancedPhoneBook = new AdvancedPhoneBook();
         for (int i = 0; i < names.length; i++) {
             String name = names[i];
             advancedPhoneBook.add(name, "");
