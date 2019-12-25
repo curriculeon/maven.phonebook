@@ -9,7 +9,7 @@ public class RemoveTest {
         // given
         SimplePhoneBook phoneBook = new SimplePhoneBook();
         phoneBook.add(name, phoneNumber);
-        Assert.assertTrue(phoneBook.hasEntry(phoneNumber));
+        Assert.assertTrue(phoneBook.hasEntry(name));
 
         // when
         phoneBook.remove(name);
