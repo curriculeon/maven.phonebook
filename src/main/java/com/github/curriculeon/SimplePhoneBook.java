@@ -3,9 +3,12 @@ package com.github.curriculeon;
 import java.util.List;
 
 /**
- * Created by leon on 12/16/2019.
+ * Created by Antonio Perdigoto on 12/16/2019.
  */
 public class SimplePhoneBook {
+    private String name;
+    private String phoneNumber;
+
     public void add(String name, String phoneNumberToAdd) {
 
     }

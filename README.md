@@ -4,6 +4,7 @@
 
 ## Getting Started
 * Fork and clone this repository to complete your lab.
+* This has been done.
 
 ## Instructions:
 
